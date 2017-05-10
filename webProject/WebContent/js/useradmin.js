@@ -26,7 +26,7 @@ $(document).ready(function() {
 		$("#table").show();
 		$("#createuser").hide();
 		$.ajax({
-		url: "http://localhost:8080/webProject/rest2/find/users",
+		url: "http://localhost:8080/webProject/rest2/service/users",
 		method: "GET",
 		success: function(data){
 			alert(data);
@@ -40,10 +40,37 @@ $(document).ready(function() {
 		return false;
 	});
 	
-// function loadRows() {
-// for (i in allUsers) {
-// <tr><th> allUers[i].name </th> <th> + allUsers[i].ini </th> + cpr + roles
-// <th></tr>
-// }
-// }
+	
+		$("#CreateUserForm").submit( function() {
+		
+			event.preventDefault();
+		//if (validateForm() == true) {
+			
+			var data = $('#CreateUserForm').serializeObject();
+
+			console.log(data);
+			debugger;
+			$.ajax({
+				url: "http://localhost:8080/webProject/rest2/service/create/user",
+				data: JSON.stringify(data),
+				contentType: "application/json",
+				method: 'POST',
+				success: function(resp){
+					console.log(data);
+					console.log('This is the Success method')
+					console.log(resp)
+					document.getElementById("CreateUserForm").reset();
+					console.log("CUForm has been cleared")
+				},
+				error: function(resp){
+					console.log(data);
+					console.log('This is the ERROR method')
+					console.log(resp)
+				}
+			});
+
+			return false;
+
+	});
+	
 });
