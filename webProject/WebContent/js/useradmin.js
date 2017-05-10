@@ -39,6 +39,12 @@ $(document).ready(function() {
 	});
 		return false;
 	});
+	document.getElementById("Forfattere").addEventListener("click",function myFunction() {
+	    var popup = document.getElementById("myPopup");
+	    popup.classList.toggle("show");
+	    $("#popupID").show();
+	    
+	});
 	
 	
 		$("#CreateUserForm").submit( function() {

@@ -10,7 +10,7 @@
 <!-- CSS -->
 <link rel="stylesheet" type="text/css" href="css/style.css">
 <link rel="stylesheet" type="text/css" href="css/admin.css">
-
+<link rel="stylesheet" type="text/css" href="css/popupcss.css">
 <!-- jQuery -->
 <script
 	src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
@@ -61,8 +61,14 @@
 			<li><a id="usradminmenu" href="#Brugeradministration">Brugeradministration</a></li>
 			<li><a id="createusermenu" href="#OpretNyBruger">Opret ny bruger</a></li>
 			<li><a id="logoutmenu" href="#LogUd">Log ud</a></li>
-			<li style="float: right"><a href="#Forfattere">Forfattere</a></li>
+			<li id="Forfattere" style="float: right"><a href="#Forfattere">Forfattere</a></li>
 		</ul>
+		<!-- popop -->
+		<div id="popupID" class="popup" style="display:none" >
+  			<span class="popuptext" id="myPopup">
+  				<img src="img/popup.png" style="width:70%;height:70%;">
+ 			 </span>
+		</div>
 
 		<!-- Table for user admin -->
 		<div id="table" style="display: none">
