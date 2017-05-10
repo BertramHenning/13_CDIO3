@@ -18,31 +18,31 @@ public class UserDTO implements Serializable
 	 */
 	private static final long serialVersionUID = -7272979590540794430L;
 	/** Operatoer-identifikationsnummer (opr_id) i omraadet 1-99999999. Vaelges af brugerne */
-	int UserId;                     
+	public int userId;                     
 	/** Operatoernavn (opr_navn) min. 2 max. 20 karakterer */
-	String Firstname; 
+	String firstname; 
 	/** Operatoernavn (opr_navn) min. 2 max. 20 karakterer */
-	String Lastname;     
+	String lastname;     
 	/** Operatoer cpr-nr 10 karakterer */
-	String CPR;                 
+	String cpr;                 
 	/** Operatoer password min. 7 max. 8 karakterer */
-	String Password; 
+	String password; 
 	List<String> roles;
 
 	public UserDTO(){
 		roles = new ArrayList<String>();
 	}
     
-    public int getUserId() { return UserId; }
-	public void setUserId(int UserId) { this.UserId = UserId; }
-	public String getFirstname() { return Firstname; }
-	public void setFirstname(String Firstname) { this.Firstname = Firstname; }
-	public String getLastname() { return Lastname; }
-	public void setLastname(String Lastname) { this.Lastname = Lastname; }
-	public String getCPR() { return CPR; }
-	public void setCPR(String CPR) { this.CPR = CPR; }
-	public String getPassword() { return Password; }
-	public void setPassword(String Password) { this.Password = Password; }
+    public int getUserId() { return userId; }
+	public void setUserId(int UserId) { this.userId = UserId; }
+	public String getFirstname() { return firstname; }
+	public void setFirstname(String Firstname) { this.firstname = Firstname; }
+	public String getLastname() { return lastname; }
+	public void setLastname(String Lastname) { this.lastname = Lastname; }
+	public String getCPR() { return cpr; }
+	public void setCPR(String CPR) { this.cpr = CPR; }
+	public String getPassword() { return password; }
+	public void setPassword(String Password) { this.password = Password; }
 	   public List<String> getRoles() {
 			return roles;
 		}
@@ -53,5 +53,5 @@ public class UserDTO implements Serializable
 		public void addRole(String role){
 			roles.add(role);
 		}
-	public String toString() { return "\n" + UserId + "\t" + Firstname + "\t" + Lastname + "\t" + CPR + "\t" + Password + "\t" + roles; }
+	public String toString() { return "\n" + userId + "\t" + firstname + "\t" + lastname + "\t" + cpr + "\t" + password + "\t" + roles; }
 }
