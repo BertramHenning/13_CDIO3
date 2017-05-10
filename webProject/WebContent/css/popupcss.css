@@ -11,7 +11,7 @@
 
 /* The actual popup */
 .popup .popuptext {
-    visibility: hidden;
+    display: none;
     width: 300px;
     background-color: #555;
     color: #fff;
@@ -39,7 +39,7 @@
 
 /* Toggle this class - hide and show the popup */
 .popup .show {
-    visibility: visible;
+    display: inline;
     -webkit-animation: fadeIn 1s;
     animation: fadeIn 1s;
 }
